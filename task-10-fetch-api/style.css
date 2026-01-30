@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background: white;
+  width: 380px;
+  padding: 35px 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.quote {
+  font-size: 17px;
+  font-style: italic;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.author {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+/* Button */
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.5);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading & error */
+.loading {
+  display: none;
+  margin-top: 15px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.error {
+  margin-top: 15px;
+  color: #dc2626;
+  font-size: 14px;
+}
